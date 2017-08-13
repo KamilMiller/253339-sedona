@@ -5,8 +5,128 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+		<header>
+			<img src="http://placehold.it/140x70" width="140" height="70" alt="Логотип сайта Седоны">
+			<nav class="main-navigation">
+				<ul class="site-navigation">
+					<li><a href="info.html">Информация</a></li>
+					<li><a href="fotoandvideo.html">Фото и видео</a></li>
+					<li><a href="sitemap.html">Карта штата</a></li>
+					<li><a href="hotels.html">Гостиницы</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="content">
+		  <section class="title">
+				<h1 class="visually-hidden">Седона</h1>
+				<div class="welcome-title">
+					<img src="http://placehold.it/200x50" width="200" height="50" alt="Welcome To The Gorgeous">			
+				</div>
+				<div class="main-title">
+					<img src="http://placehold.it/200x100" width="200" height="100" alt="Sedona">
+				</div>
+				<div class="tag-line">
+					<img src="http://placehold.it/200x50" width="200" height="50" alt="Because the Grand Canyon sucks!">
+				</div>
+			</section>
+		  <section class="advantages">
+				<h2 class="visually-hidden">Преимущества</h2>
+				<h3>Седона - небольшой городок в Аризоне,<br>заслуживающий большего</h3>
+				<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
+				<div>
+					<h3>Настоящий городок</h3>
+					<p>№1</p>
+					<p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
+				</div>
+				<ul>
+					<li>
+<!--	Иконки не делаю. Предполагаю их добавить посредством псевдоэлемента ::before. К.Н.	-->
+						<h3>Жилье</h3>
+						<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+					</li>
+					<li>
+						<h3>Еда</h3>
+						<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+					</li>
+					<li>
+						<h3>Сувениры</h3>
+						<p>Не только китайского, но и местного производства!</p>
+					</li>
+				</ul>
+				<div>
+					<h3>Там есть мост Дьявола</h3>
+					<p>№2</p>
+					<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+				</div>
+				<ul>
+					<li>
+						<h3>Небольшая площадь</h3>
+						<p>№3</p>
+						<p>Все достопримечательности находятся очень близко</p>
+					</li>
+					<li>
+						<h3>Красивая дорога</h3>
+						<p>№4</p>
+						<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+					</li>
+					<li>
+						<h3>Мало туристов</h3>
+						<p>№5</p>
+						<p>Большинство едет в Гранд Каньон и толпится там</p>
+					</li>
+			  </ul>
+		  </section>
+		  <section class="hotel-search">
+				<h2 class="visually-hidden">Поиск гостинницы</h2>
+				<div class="search-form-intro">
+					<span>Заинтересовались?</span>
+					<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+				</div>
+				<div class="search-form-field">
+					<button class="open-form">Поиск гостинницы в Седоне</button>
+					<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+						<p>
+							<label for="date-in-field">Дата заезда</label>
+							<input name="date-in" type="date" id="date-in-field" required>
+						</p>
+						<p>
+							<label for="date-in-field">Дата выезда</label>
+							<input name="date-out" type="date" id="date-out-field" required>
+						</p>
+						<p>
+							<label>
+								Взрослые <input name="adults" type="number" min="1" max="4" step="1" placeholder="2" required>
+							</label>
+							<label>
+								Дети <input name="adults" type="number" min="0" max="4" step="1" placeholder="0" required>
+							</label>
+						</p>
+						<input type="submit" value="Найти">
+					</form>
+					<div class="date-icon"></div>
+					<div class="minus-icon"></div>
+					<div class="plus-icon"></div>
+				</div>
+				<div class="map">
+				</div>
+		  </section>
+		</main>
+		<footer>
+			<div>
+				<h3>#VISITSEDONA</h3>
+			</div>
+			<div>
+				<ul>
+          <li><a class="social-button" href="#">Вконтакте</a></li>
+          <li><a class="social-button" href="#">Фейсбук</a></li>
+          <li><a class="social-button" href="#">Инстаграм</a></li>
+        </ul>
+			</div>
+			<div>
+				<p class="footer-copyright">
+					Website by <a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/200x40" width="200" height="40" alt="HTML Academy"></a>
+      </p>
+			</div>
+		</footer>
   </body>
 </html>
