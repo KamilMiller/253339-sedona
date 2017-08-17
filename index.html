@@ -5,6 +5,7 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+		<div class="box-shadow"></div>
 		<header>
 			<img src="http://placehold.it/140x70" width="140" height="70" alt="Логотип сайта Седоны">
 			<nav class="main-navigation">
@@ -20,45 +21,46 @@
 		  <section class="title">
 				<h1 class="visually-hidden">Седона</h1>
 				<div class="welcome-title">
-					<img src="http://placehold.it/200x50" width="200" height="50" alt="Welcome To The Gorgeous">			
-				</div>
-				<div class="main-title">
-					<img src="http://placehold.it/200x100" width="200" height="100" alt="Sedona">
-				</div>
-				<div class="tag-line">
-					<img src="http://placehold.it/200x50" width="200" height="50" alt="Because the Grand Canyon sucks!">
+					<img src="http://placehold.it/200x200" width="200" height="200" alt="Welcome To Sedona">			
 				</div>
 			</section>
 		  <section class="advantages">
 				<h2 class="visually-hidden">Преимущества</h2>
-				<h3>Седона - небольшой городок в Аризоне,<br>заслуживающий большего</h3>
+				<h3>Седона - небольшой городок в Аризоне, заслуживающий большего</h3>
 				<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
-				<div>
-					<h3>Настоящий городок</h3>
-					<p>№1</p>
-					<p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
+				<div class="advantage-box-a">
+					<div class="advantage-1">
+						<h3>Настоящий городок</h3>
+						<p>№1</p>
+						<p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
+			    </div>
+					<div class="advantage-picture-1">
+					</div>
 				</div>
-				<ul>
-					<li>
-<!--	Иконки не делаю. Предполагаю их добавить посредством псевдоэлемента ::before. К.Н.	-->
+				<ul class="needs">
+					<li class="accommodation">
 						<h3>Жилье</h3>
 						<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 					</li>
-					<li>
+					<li class="food">
 						<h3>Еда</h3>
 						<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
 					</li>
-					<li>
+					<li class="souvenirs">
 						<h3>Сувениры</h3>
 						<p>Не только китайского, но и местного производства!</p>
 					</li>
 				</ul>
-				<div>
-					<h3>Там есть мост Дьявола</h3>
-					<p>№2</p>
-					<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+				<div class="advantage-box-b">
+					<div class="advantage-picture-2">
+					</div>
+					<div class="advantage-2">
+						<h3>Там есть мост Дьявола</h3>
+						<p>№2</p>
+						<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+					</div>
 				</div>
-				<ul>
+				<ul class="advantage-box-c">
 					<li>
 						<h3>Небольшая площадь</h3>
 						<p>№3</p>
@@ -83,31 +85,35 @@
 					<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 				</div>
 				<div class="search-form-field">
-					<button class="open-form">Поиск гостинницы в Седоне</button>
+					<a href="#" class="open-form-button">Поиск гостинницы в Седоне</a>
 					<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
 						<p>
 							<label for="date-in-field">Дата заезда</label>
-							<input name="date-in" type="date" id="date-in-field" required>
+							<input name="date-in" type="text" id="date-in-field" required>
 						</p>
 						<p>
 							<label for="date-in-field">Дата выезда</label>
-							<input name="date-out" type="date" id="date-out-field" required>
+							<input name="date-out" type="text" id="date-out-field" required>
 						</p>
+						<div class="date-icon">
+						</div>
 						<p>
 							<label>
-								Взрослые <input name="adults" type="number" min="1" max="4" step="1" placeholder="2" required>
+								Взрослые <input name="adult" type="text">
 							</label>
+							<button type="button" class="adult-minus"></button>
+							<button type="button" class="adult-plus"></button>
 							<label>
-								Дети <input name="adults" type="number" min="0" max="4" step="1" placeholder="0" required>
+								Дети <input name="child" type="text">
 							</label>
+							<button type="button" class="child-minus"></button>
+							<button type="button" class="child-plus"></button>
 						</p>
 						<input type="submit" value="Найти">
 					</form>
-					<div class="date-icon"></div>
-					<div class="minus-icon"></div>
-					<div class="plus-icon"></div>
 				</div>
 				<div class="map">
+<!-- Блок карты не входит в "search-form-field". Оставляю как есть. К.Н.	-->
 				</div>
 		  </section>
 		</main>
@@ -128,5 +134,5 @@
       </p>
 			</div>
 		</footer>
-  </body>
+	  </body>
 </html>
