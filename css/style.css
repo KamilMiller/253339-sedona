@@ -1,0 +1,31 @@
+body {
+	font-family: "PTSans", "Tahoma", sans-serif;
+	font-size: 14px;
+	color: #333333;
+	text-transform: uppercase;
+	line-height: 26px;
+	font-weight: normal;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+h3 {
+	font-size: 21px;
+}
+
+.black-title {
+	color: black;
+}
+
+.white-title {
+	color: white;
+}
