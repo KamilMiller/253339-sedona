@@ -8,7 +8,7 @@
   <body>
 		<div class="box-shadow"> 
 			<header>
-				<a href="index.html"><img src="img/sedona-logo.png" width="138" height="70" alt="Логотип сайта Седоны"></a>
+				<a href="index.html"><img src="img/sedona-logo.png" width="138" height="70" alt="Логотип сайта Седоны">Главная</a>
 				<nav class="main-navigation">
 					<ul class="site-navigation">
 						<li><a href="info.html">Информация</a></li>
@@ -23,7 +23,8 @@
 				<section class="filters">
 					<h2 class="visually-hidden">Фильтры</h2>
 					<form class="filters-form">
-						<fieldset class="facilities">
+						<fieldset class="criteria">
+							<legend class="criteria-group">Инфраструктура:</legend>
 							<label>
 								<input type="checkbox" name="pool" checked>Бассейн
 							</label>
@@ -34,7 +35,8 @@
 								<input type="checkbox" name="wi-fi">Wi-Fi
 							</label>
 						</fieldset>
-						<fieldset class="facilities">
+						<fieldset class="criteria">
+							<legend class="criteria-group">Тип жилья:</legend>
 							<label>
 								<input type="checkbox" name="hotel" checked>Отель
 							</label>
@@ -45,11 +47,12 @@
 								<input type="checkbox" name="apartment" checked>Апартаменты
 							</label>						
 						</fieldset>
-						<fieldset class="price">
-							<p class="price-range-id">Стоимость в сутки (Р)</p>
+						<fieldset class="criteria">
+							<legend class="criteria-group">Стоимость в сутки (Р)</legend>
 							<div class="end-of-range">
 								<input type="text" name="price-min" placeholder="От 0">
 								<input type="text" name="price-max" placeholder="До 3000">
+<!-- У двух элекментов <input> в макете нет лейблов. Есть ли смысл добавлять? — особенно с учетом того, что плейсхолдеры, в данном случае,  не только показывают образец ввода данных, но и фактически дают понять, что за данные должны быть в данных полях. К.Н. -->
 							</div>
 							<div class="scrollbox"> 
 								<div class="scrollbox-scale"></div>
@@ -65,14 +68,14 @@
 						<h2 class="visually-hidden">Результаты поиска</h2>
 						<span class="static-text">Найдено: <span class="search-result-number">3</span></span>
 						<div class="sort-items">
-							<span class="sort-item">Сортировка</span>
-							<span class="sort-item">По цене</span>
-							<span class="sort-item">По типу</span>
-							<span class="sort-item">По рейтингу</span>
+							<span>Сортировка</span>
+							<button type="button" class="sort-item">По цене</button>
+							<button type="button" class="sort-item">По типу</button>
+							<button type="button" class="sort-item">По рейтингу</button>
 						</div>
 						<div class="sort-buttons">
-							<button type="button" name="descending"></button>
-							<button type="button" name="ascending"></button>
+							<button type="button" name="descending">По убыванию</button>
+							<button type="button" name="ascending">По возрастанию</button>
 						</div>
 					</div>
 					<ul class="search-result-list">
