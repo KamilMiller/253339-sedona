@@ -1,10 +1,20 @@
+/* Общие стили */
+
+html,
 body {
-	font-family: "PTSans", "Tahoma", sans-serif;
+	font-family: "PT Sans", "Tahoma", sans-serif;
 	font-size: 14px;
 	color: #333333;
 	text-transform: uppercase;
 	line-height: 26px;
 	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	background-color: #f2f2f2;
+}
+
+a {
+	text-decoration: none;
 }
 
 .visually-hidden {
@@ -18,14 +28,330 @@ body {
 	overflow: hidden;
 }
 
-h3 {
+/* Общие стили заголовков h3 (по классам) */
+
+.subtitle,
+.hashtag,
+.static-text,
+.search-result-number {
 	font-size: 21px;
+	line-height: 21px;
+	font-weight: bold;
+	color: #000000;
 }
 
-.black-title {
-	color: black;
+/* Общий фон контейнера контента */
+
+.content-box {
+	background-color: #ffffff;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.white-title {
-	color: white;
+/* Хэдер */
+/* Меню */
+
+.site-navigation {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.site-navigation a {
+	font-weight: bold;
+	color: #000000;
+}
+
+.site-navigation a:hover {
+	color: #81b3d2;
+}
+
+.site-navigation a:active {
+	color: #b2b2b2;
+}
+
+.current {
+	font-weight: bold;
+	color: #766357;
+}
+
+/* Главная страница. Седона. */
+/* Блок "Welcome" */
+
+.title {
+	background-color: #9aabb6;
+	background: 
+		url("../img/shape.png") bottom center no-repeat,
+		url("../img/background-photo.jpg") top center no-repeat;
+}
+
+/* Преимущества */
+
+.advantage, 
+.advantage h3 {
+	color: #ffffff;
+}
+
+.advantage-box-a,
+.advantage-box-b {
+	display: flex;
+	height: 256px;
+}
+
+.advantage {
+	width: 34%;
+	background-color: #81b3d2;
+}
+
+.advantage-picture {
+	width: 66%;
+}
+
+.advantage-box-a .advantage-picture {
+	background: url("../img/right-picture.jpg") top right no-repeat;
+}
+
+.advantage-box-b .advantage-picture {
+	background: url("../img/left-picture.jpg") top left no-repeat;
+}
+
+.needs,
+.advantage-box-c {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.accommodation::before {
+	content: url("../img/icon-1.svg");
+}
+
+.food::before {
+	content: url("../img/icon-2.svg");
+}
+
+.souvenirs::before {
+	content: url("../img/icon-3.svg");
+}
+
+.advantage-box-c {
+	background-color: #eeeeee;
+}
+
+/* Поиск гостиницы */
+
+.search-form-field {
+	font-weight: bold;
+}
+
+.search-form-intro span {
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 36px;
+}
+
+.open-form-button {
+	background-color: #766357;
+	color: #ffffff;
+}
+
+.open-form-button:hover {
+	background-color: #604e43;
+}
+
+.open-form-button:active {
+	background-color: #604e43;
+	color: #857871;
+}
+
+.search-form input[type="submit"],
+.search-form ~ input[type="text"] {
+	font-family: "PT Sans", "Tahoma", sans-serif;
+	line-height: 26px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.search-form ~ input[type="text"] {
+	font-size: 14px;
+	color: #000000;
+}
+
+.search-form input[type="submit"] {
+	font-size: 21px;
+	color: #ffffff;
+	background-color: #81b3d2;
+	border: none;
+}
+
+.search-form input[type="submit"]:hover {
+	background-color: #669ec0;
+}
+
+.search-form input[type="submit"]:active {
+	background-color: #5496bd;
+	color: #88b6d1;
+}
+
+::-webkit-input-placeholder {
+	color: #000000;
+	font-weight: bold;
+}
+
+::-moz-placeholder {
+	color: #000000;
+	font-weight: bold;
+}
+
+:-moz-placeholder {
+	color: #000000;
+	font-weight: bold;
+}
+
+:-ms-input-placeholder {
+	color: #000000;
+	font-weight: bold;
+}
+
+/* Внутренняя страница. Гостиницы. 
+/* Фильтры поиска. */
+
+.filters {
+	background: url("../img/filter-background.jpg") top center no-repeat;
+	color: #ffffff;
+}
+
+.criteria-group {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.filters input[type="submit"] {
+	color: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	background-color: transparent;
+	border: solid 2px #ffffff;
+	border-radius: 2px;
+}
+
+.filters input[type="submit"]:hover {
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+.static-text,
+.search-result-number {
+	font-weight: bold;
+	color: #000000;
+}
+
+.sort-item {
+	font-size: 12px;
+	text-transform: uppercase;
+	line-height: 18px;
+}
+
+.sort-item {
+	background-color: #ffffff;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: dotted 1px #81b3d2;
+	text-decoration: none;
+	color: #b2b2b2;
+}
+
+.sort-item:hover {
+	color: #81b3d2;
+}
+
+.sort-item:active {
+	border-bottom: none;
+	color: #000000;
+}
+
+/* Список отелей */
+
+.search-result-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.hotel-page,
+.booking-form {
+	color: #ffffff;
+	font-weight: bold; 
+}
+
+.hotel-page {
+	background-color: #81b3d2;
+}
+
+.hotel-page:hover {
+	background-color: #669ec0;
+}
+
+.hotel-page:active {
+	background-color: #5496bd;
+	color: #88b6d1;
+}
+
+.booking-form {
+	background-color: #766357;
+}
+
+.booking-form:hover {
+	background-color: #604e43;
+}
+
+.booking-form:active {
+	background-color: #503e33;
+	color: #857871;
+}
+
+.rating {
+	background-color: #f2f2f2;
+	color: #666666;
+}
+
+/* Футер */
+/* Социальные кнопки */
+
+.social {
+	display: inline-block;
+	width: 44px;
+	height: 46px;
+	background-color: #81b3d2;
+	font-size: 0px;
+	border: solid 1px #81b3d2;
+  text-align: center;
+	vertical-align: middle;
+}
+
+.tw-icon {
+	margin-top: 16px;
+}
+
+.fb-icon {
+	margin-top: 13px;
+}
+
+.yt-icon {
+	margin-top: 16px;
+}
+
+.social:hover {
+	background-color: #669ec0;
+}
+
+.social:active {
+	background-color: #5496bd;
+}
+
+.social:active img {
+	opacity: 0.3;
 }

@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-		<div class="box-shadow"> 
+		<div class="content-box"> 
 			<header>
 				<a href="index.html"><img src="img/sedona-logo.png" width="138" height="70" alt="Логотип сайта Седоны">Главная</a>
 				<nav class="main-navigation">
@@ -14,7 +16,7 @@
 						<li><a href="info.html">Информация</a></li>
 						<li><a href="fotoandvideo.html">Фото и видео</a></li>
 						<li><a href="sitemap.html">Карта штата</a></li>
-						<li><a href="hotels.html">Гостиницы</a></li>
+						<li><span class="current">Гостиницы</span></li>
 					</ul>
 				</nav>
 			</header>
@@ -69,9 +71,9 @@
 						<span class="static-text">Найдено: <span class="search-result-number">3</span></span>
 						<div class="sort-items">
 							<span>Сортировка</span>
-							<button type="button" class="sort-item">По цене</button>
-							<button type="button" class="sort-item">По типу</button>
-							<button type="button" class="sort-item">По рейтингу</button>
+							<a href="#" class="sort-item">По цене</a>
+							<a href="#" class="sort-item">По типу</a>
+							<a href="#" class="sort-item">По рейтингу</a>
 						</div>
 						<div class="sort-buttons">
 							<button type="button" name="descending">По убыванию</button>
@@ -84,7 +86,7 @@
 								<img src="img/amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
 							</div>
 							<div class="hotel-info">
-								<h3 class="black-title">Amara Resort & Spa</h3>
+								<h3 class="subtitle">Amara Resort & Spa</h3>
 								<p>  
 									<span class="search-result-type">Гостиница</span>
 									<span class="search-result-price">От 3500 Р.</span>
@@ -111,7 +113,7 @@
 								<img src="img/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
 							</div>
 							<div class="hotel-info">
-								<h3 class="black-title">Desert Quail Inn</h3>
+								<h3 class="subtitle">Desert Quail Inn</h3>
 								<p>
 									<span class="search-result-type">Мотель</span>
 									<span class="search-result-price">От 2000 Р.</span>
@@ -137,7 +139,7 @@
 								<img src="img/villas.jpg" width="135" height="90" alt="Villas At Poco Diablo">
 							</div>
 							<div class="hotel-info">
-								<h3 class="black-title">Villas At Poco Diablo</h3>
+								<h3 class="subtitle">Villas At Poco Diablo</h3>
 								<p>
 									<span class="search-result-type">Апартаменты</span>
 									<span class="search-result-price">От 4000 Р.</span>
@@ -162,18 +164,28 @@
 			</main>
 			<footer>
 				<div>
-					<h3 class="black-title">#VISITSEDONA</h3>
+					<h3 class="hashtag">#VISITSEDONA</h3>
 				</div>
 				<div>
-					<ul>
-						<li><a class="social-button" href="#">Вконтакте</a></li>
-						<li><a class="social-button" href="#">Фейсбук</a></li>
-						<li><a class="social-button" href="#">Инстаграм</a></li>
-					</ul>
+					<a class="social tw" href="#">
+						<img src="img/twitter.svg" class="tw-icon" width="17" height="15" alt="Твиттер">
+						Твиттер
+					</a>
+					<a class="social fb" href="#">
+						<img src="img/fb-icon.svg" class="fb-icon" width="12" height="22" alt="Фейсбук">
+						Фейсбук
+					</a>
+					<a class="social yt" href="#">
+						<img src="img/youtube.svg" class="yt-icon" width="20" height="16" alt="YouTube">
+						YouTube
+					</a>
 				</div>
 				<div>
 					<p class="footer-copyright">
-						Website by <a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/200x40" width="200" height="40" alt="HTML Academy"></a>
+						Website by 
+						<a class="academy-button" href="https://htmlacademy.ru/intensive/htmlcss">
+							<img src="img/logo-htmlacademy.svg" width="200" height="40" alt="HTML Academy">
+						</a>
 				  </p>
 				</div>
 			</footer>

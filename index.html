@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-		<div class="box-shadow">
+		<div class="content-box">
 			<header>
 				<img src="img/sedona-logo.png" width="138" height="70" alt="Логотип сайта Седоны">
 				<nav class="main-navigation">
@@ -27,12 +29,12 @@
 				</section>
 				<section class="advantages">
 					<h2 class="visually-hidden">Преимущества</h2>
-					<h3 class="black-title">Седона - небольшой городок в Аризоне, заслуживающий большего</h3>
+					<h3 class="subtitle slogan">Седона - небольшой городок в Аризоне, заслуживающий большего</h3>
 					<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
 					<div class="advantage-box-a">
 						<div class="advantage">
-							<h3 class="white-title">Настоящий городок</h3>
-							<p>№1</p>
+							<h3 class="subtitle">Настоящий городок</h3>
+							<p>- №1 -</p>
 							<p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
 						</div>
 						<div class="advantage-picture">
@@ -40,15 +42,15 @@
 					</div>
 					<ul class="needs">
 						<li class="accommodation">
-							<h3 class="black-title">Жилье</h3>
+							<h3 class="subtitle">Жилье</h3>
 							<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 						</li>
 						<li class="food">
-							<h3 class="black-title">Еда</h3>
+							<h3 class="subtitle">Еда</h3>
 							<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
 						</li>
 						<li class="souvenirs">
-							<h3 class="black-title">Сувениры</h3>
+							<h3 class="subtitle">Сувениры</h3>
 							<p>Не только китайского, но и местного производства!</p>
 						</li>
 					</ul>
@@ -56,25 +58,25 @@
 						<div class="advantage-picture">
 						</div>
 						<div class="advantage">
-							<h3 class="white-title">Там есть мост Дьявола</h3>
-							<p>№2</p>
+							<h3 class="subtitle">Там есть мост Дьявола</h3>
+							<p>- №2 -</p>
 							<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 						</div>
 					</div>
 					<ul class="advantage-box-c">
 						<li>
-							<h3>Небольшая площадь</h3>
-							<p>№3</p>
+							<h3 class="subtitle">Небольшая площадь</h3>
+							<p>- №3 -</p>
 							<p>Все достопримечательности находятся очень близко</p>
 						</li>
 						<li>
-							<h3>Красивая дорога</h3>
-							<p>№4</p>
+							<h3 class="subtitle">Красивая дорога</h3>
+							<p>- №4 -</p>
 							<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 						</li>
 						<li>
-							<h3>Мало туристов</h3>
-							<p>№5</p>
+							<h3 class="subtitle">Мало туристов</h3>
+							<p>- №5 -</p>
 							<p>Большинство едет в Гранд Каньон и толпится там</p>
 						</li>
 					</ul>
@@ -93,7 +95,6 @@
 								<div class="in-out">
 									<input name="date-in" type="text" id="date-in-field" placeholder="24 апреля 2017" required>
 									<button type="button" class="date-icon">Выбрать дату</button>
-<!-- Воснинимая буквально задание "Добавьте подписи ко всем интерактивным элементам: /.../, текст в кнопки и ссылки." добавляю подписи к кнопкам там, где в макете эти подписи не предусмотрены. В дальнешем эти подписи, видимо, должны быть спрятаны. К.Н. -->
 							  </div>
 							</div>
 							<div>
@@ -107,13 +108,13 @@
 								<label for="adult-number">Взрослые</label>
 								<div class="guests">
 									<button type="button" class="adult-minus">-</button>
-									<input name="adult" type="text" id="adult-number">
+									<input name="adult" type="text" id="adult-number" placeholder="2">
 									<button type="button" class="adult-plus">+</button>
 								</div>
 								<label for="child-number">Дети</label>
 								<div class="guests">
 									<button type="button" class="child-minus">-</button>
-									<input name="child" type="text" id="child-number">
+									<input name="child" type="text" id="child-number" placeholder="0">
 									<button type="button" class="child-plus">+</button>
 								</div>
 							</div>
@@ -127,18 +128,28 @@
 			</main>
 			<footer>
 				<div>
-					<h3>#VISITSEDONA</h3>
+					<h3 class="hashtag">#VISITSEDONA</h3>
 				</div>
 				<div>
-					<ul>
-						<li><a class="social-button" href="#">Вконтакте</a></li>
-						<li><a class="social-button" href="#">Фейсбук</a></li>
-						<li><a class="social-button" href="#">Инстаграм</a></li>
-					</ul>
+					<a class="social tw" href="#">
+						<img src="img/twitter.svg" class="tw-icon" width="17" height="15" alt="Твиттер">
+						Твиттер
+					</a>
+					<a class="social fb" href="#">
+						<img src="img/fb-icon.svg" class="fb-icon" width="12" height="22" alt="Фейсбук">
+						Фейсбук
+					</a>
+					<a class="social yt" href="#">
+						<img src="img/youtube.svg" class="yt-icon" width="20" height="16" alt="YouTube">
+						YouTube
+					</a>
 				</div>
 				<div>
 					<p class="footer-copyright">
-						Website by <a class="academy-button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/200x40" width="200" height="40" alt="HTML Academy"></a>
+						Website by 
+						<a class="academy-button" href="https://htmlacademy.ru/intensive/htmlcss">
+							<img src="img/logo-htmlacademy.svg" width="200" height="40" alt="HTML Academy">
+						</a>
 				  </p>
 				</div>
 			</footer>
