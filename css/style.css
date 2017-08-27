@@ -68,7 +68,7 @@ a {
 }
 
 .site-navigation a:active {
-	color: #b2b2b2;
+	color: rgba(0, 0, 0, 0.3);
 }
 
 .current {
@@ -162,18 +162,24 @@ a {
 
 .open-form-button:active {
 	background-color: #604e43;
-	color: #857871;
+	color: rgba(255, 255, 255, 0.3);
 }
 
 .search-form input[type="submit"],
-.search-form ~ input[type="text"] {
+input[name="date-in"],
+input[name="date-out"],
+input[name="adult"],
+input[name="child"] {
 	font-family: "PT Sans", "Tahoma", sans-serif;
 	line-height: 26px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-.search-form ~ input[type="text"] {
+input[name="date-in"],
+input[name="date-out"],
+input[name="adult"],
+input[name="child"] {
 	font-size: 14px;
 	color: #000000;
 }
@@ -191,27 +197,31 @@ a {
 
 .search-form input[type="submit"]:active {
 	background-color: #5496bd;
-	color: #88b6d1;
+	color: rgba(255, 255, 255, 0.3);
 }
 
 ::-webkit-input-placeholder {
 	color: #000000;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 ::-moz-placeholder {
 	color: #000000;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 :-moz-placeholder {
 	color: #000000;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 :-ms-input-placeholder {
 	color: #000000;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 /* Внутренняя страница. Гостиницы. 
@@ -225,6 +235,25 @@ a {
 .criteria-group {
 	font-size: 16px;
 	font-weight: bold;
+}
+
+.end-of-range {
+	width: 220px;
+	height: 32px;
+	border: solid 2px #ffffff;
+	border-radius: 2px;
+}
+
+input[name="price-min"],
+input[name="price-max"] {
+	width: 107px;
+	border: none;
+	background-color: transparent;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 21px;
+	text-transform: uppercase;
 }
 
 .filters input[type="submit"] {
@@ -287,6 +316,18 @@ a {
 	font-weight: bold; 
 }
 
+.subtitle a {
+	color: #000000;
+}
+
+.subtitle a:hover {
+	color: #81b3d2;
+}
+
+.subtitle a:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
 .hotel-page {
 	background-color: #81b3d2;
 }
@@ -297,7 +338,7 @@ a {
 
 .hotel-page:active {
 	background-color: #5496bd;
-	color: #88b6d1;
+	color: rgba(255, 255, 255, 0.3);
 }
 
 .booking-form {
@@ -310,7 +351,7 @@ a {
 
 .booking-form:active {
 	background-color: #503e33;
-	color: #857871;
+	color: rgba(255, 255, 255, 0.3);
 }
 
 .rating {
