@@ -172,6 +172,35 @@ a {
 .advantage {
 	width: 33%;
 	background-color: #81b3d2;
+	text-align: center;
+	padding-top: 47px;
+	box-sizing: border-box;
+}
+
+.advantage-box-a .advantage {
+	padding-left: 55px;
+	padding-right: 55px;
+}
+
+.advantage-box-b .advantage {
+	padding-left: 45px;
+	padding-right: 45px;
+}
+
+.advantage .subtitle {
+	margin-bottom: 22px;
+}
+
+.number {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 17px;
+}
+
+.description {
+	margin: 0;
+	line-height: 21px;
 }
 
 .advantage-picture {
@@ -196,25 +225,56 @@ a {
 }
 
 .needs {
-	height: 330px;
+	height: 329px;
 }
 
 .needs-item {
+	position: relative;
 	width: 33%;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 161px;
+	padding-left: 55px;
+	padding-right: 55px;
+}
+
+.needs-item::before {
+	position: absolute;
 }
 
 .needs-item:first-child::before {
 	content: url("../img/icon-1.svg");
+	margin: 0 auto;
+	top: 60px;
+	left: 0;
+	right: 0;
 }
 
 .needs-item:nth-child(2)::before {
-	content: url("../img/icon-2.svg");
+	content: url("../img/icon-3.svg");
+	margin: 0 auto;
+	top: 61px;
+	left: 0;
+	right: 0;
 }
 
 .needs-item:last-child::before {
-	content: url("../img/icon-3.svg");
+	content: url("../img/icon-2.svg");
+	margin: 0 auto;
+	top: 56px;
+	left: 0;
+	right: 0;
 }
 
+.needs-item .subtitle {
+	margin-bottom: 25px;
+}
+
+.needs-item p {
+	margin: 0;
+	line-height: 21px;
+}
+ 
 .advantage-box-c {
 	height: 256px;
 	background-color: #eeeeee;
@@ -222,6 +282,27 @@ a {
 
 .advantage-box-c li {
 	width: 33%;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 47px;
+	padding-left: 65px;
+	padding-right: 65px;
+}
+
+.advantage-box-c .subtitle {
+	display: inline-block;
+	width: 120px;
+	margin-bottom: 24px;
+}
+
+.advantage-box-c .number {
+	margin-top: 0;
+	margin-bottom: 18px;
+}
+
+.advantage-box-c .description {
+	margin: 0;
+	line-height: 21px;
 }
 
 /* Поиск гостиницы */
@@ -578,6 +659,10 @@ input[name="price-max"] {
 }
 
 .star {
+	display: inline-block;
+	width: 18px;
+	height: 17px;
+	background: url("../img/star.svg") top center no-repeat;
 	margin-left: 2px;
 }
 
