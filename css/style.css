@@ -52,6 +52,7 @@ a {
 	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
+	box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
 }
 
 /* Хэдер */
@@ -314,7 +315,8 @@ a {
 	line-height: 21px;
 }
 
-/* Поиск гостиницы */
+/* Поиск гостиницы. */
+/* Поиск гостиницы. Заголовок и кнопка. */
 
 .upper-box {
 	display: flex;
@@ -370,6 +372,8 @@ a {
 	background: url("../img/map.jpg") top center no-repeat;
 }
 
+/* Поиск гостиницы. Форма. */
+
 .middle-box {
 	position: relative;
 }
@@ -378,7 +382,7 @@ a {
 	position: absolute;
 	box-sizing: border-box;
 	width: 568px;
-	height: 395px;
+/*	height: 395px;*/
 /*	Высота временно. Дoверстаю форму — уберу. К.Н. */
 	font-weight: bold;
 	top: 0;
@@ -386,41 +390,156 @@ a {
 	margin-left: -284px;
 	padding: 55px;
 	background-color: #ffffff;
+	box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
 }
 
 .search-form {
 	display: flex;
-	flex-direction: column;
+/*	flex-direction: column;*/
+	flex-wrap: wrap;
 }
 
 .search-form p {
-	margin: 0;
+	position: relative;
+	font-size: 0;
+	margin-top: 0;
+	margin-bottom: 30px;
+	width: 100%;
+	height: 38px;
 }
 
-.search-form input[type="submit"],
-input[name="date-in"],
-input[name="date-out"],
-input[name="adult"],
-input[name="child"] {
+.search-form label {
+	display: inline-block;
+	vertical-align: middle;
+	height: inherit;
+	margin: 0;
+	font-size: 14px;
+	width: 112px;
+	box-sizing: border-box;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+label[for="right-counter"] {
+	width: 118px;
+	padding-left: 53px;
+}
+
+.search-form input {
+	margin: 0;
 	font-family: "PT Sans", "Tahoma", sans-serif;
+	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
 	text-transform: uppercase;
+	color: #000000;
+	box-sizing: border-box;
+	border: none;
+	vertical-align: middle;
+	height: 38px;
+	background-color: #f2f2f2;
+	padding-top: 6px;
+	padding-bottom: 6px;
 }
 
-input[name="date-in"],
-input[name="date-out"],
-input[name="adult"],
-input[name="child"] {
-	font-size: 14px;
-	color: #000000;
+input[name="date"] {
+	width: 346px;
+	padding-left: 12px;
+	padding-right: 51px;
+}
+
+input[name="date"]:hover {
+	background-color: #ebebeb;
+}
+
+input[name="date"]:active {
+	background-color: #ffffff;
+	border: solid 2px #e5e5e5;
+}
+
+.calendar-icon {
+	display: block;
+	position: absolute;
+	box-sizing: border-box;
+	width: 39px;
+	height: 38px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 9px;
+	padding-right: 9px;
+	margin; 0;
+	border: none;
+	background-color: transparent;
+	top: 0px;
+	right: 0px;
+}
+
+.calendar-icon path {
+	fill: #a9a9a9;
+}
+
+.calendar-icon:hover path {
+	fill: #000000;
+}
+
+.calendar-icon:active path {
+	fill: #81b3d2;
+}
+
+input[name="counter"] {
+	width: 36px;
+	text-align: center; 
+}
+
+.minus,
+.plus {
+	display: inline-block;
+	vertical-align: middle;
+	width: 39px;
+	height: 38px;
+/*	background-color: #f2f2f2;*/
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.minus {
+	background: url("../img/minus-norm.png") center center no-repeat;
+	background-color: #f2f2f2;
+}
+
+.plus {
+	background: url("../img/plus-norm.png") center center no-repeat;
+	background-color: #f2f2f2;
+}
+
+.minus:hover {
+	background: url("../img/minus-hover.png") center center no-repeat;
+	background-color: #f2f2f2;
+}
+
+.plus:hover {
+	background: url("../img/plus-hover.png") center center no-repeat;
+	background-color: #f2f2f2;
+}
+
+.minus:active {
+	background: url("../img/minus-active.png") center center no-repeat;
+	background-color: #f2f2f2;
+}
+
+.plus:active {
+	background: url("../img/plus-active.png") center center no-repeat;
+	background-color: #f2f2f2;
 }
 
 .search-form input[type="submit"] {
 	font-size: 21px;
 	color: #ffffff;
 	background-color: #81b3d2;
-	border: none;
+	margin-top: 23px;
+	height: 58px;
+	width: 100%;
 }
 
 .search-form input[type="submit"]:hover {
@@ -456,51 +575,187 @@ input[name="child"] {
 	text-transform: uppercase;
 }
 
-/* Внутренняя страница. Гостиницы. 
+/* Внутренняя страница. Гостиницы. */
 /* Фильтры поиска. */
 
 .filters {
-	background: url("../img/filter-background.jpg") top center no-repeat;
+	background: url("../img/filter-background.jpg") 50% -56px no-repeat;
 	color: #ffffff;
-	height: 217px;
-/*	Высоту уберу после верстки формы. К.Н. */
+/*	height: 217px;*/
+	box-sizing: border-box;
+	padding-top: 25px;
+	padding-bottom: 30px;
+	padding-left: 72px;
+	padding-right: 72px;
 }
 
 .filters-form {
 	display: flex;
 }
 
-.criteria-group {
-	font-size: 16px;
-	font-weight: bold;
-}
-
-.end-of-range {
-	width: 220px;
-	height: 32px;
-	border: solid 2px #ffffff;
-	border-radius: 2px;
-}
-
-input[name="price-min"],
-input[name="price-max"] {
-	width: 107px;
-	border: none;
-	background-color: transparent;
+.filters-form input {
 	color: #ffffff;
+	font-family: "PT Sans", "Tahoma", sans-serif;	
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 21px;
 	text-transform: uppercase;
 }
 
+.criteria,
+.price {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.criteria {
+	width: 255px;
+}
+
+.criteria:last-of-type {
+	margin-right: auto;
+}
+
+.criteria-group {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.criteria p {
+	display: inline-block;
+	vertical-align: middle;
+	width: inherit;
+	margin-top: 20px;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+}
+
+.checkbox-label {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.checkbox-label::before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 23px;
+	width: 26px;
+	margin-right: 14px;
+}
+
+input[type="checkbox"]:not(:checked) ~ .checkbox-label::before {
+	background: url("../img/checkbox-off.svg") top left no-repeat;
+}
+
+input[type="checkbox"]:checked ~ .checkbox-label::before {
+	background: url("../img/checkbox-on.svg") top left no-repeat;
+}
+
+.price-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.end-of-range {
+	position: relative;	
+	box-sizing: border-box;
+	width: 318px;
+	height: 36px;
+	border: solid 2px #ffffff;
+	border-radius: 2px;
+	margin-top: 7px;
+}
+
+input[name="price-range"] {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	width: 155px;
+	height: 32px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
+
+.end-of-range::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 2px;
+	height: 22px;
+	background-color: #ffffff;
+	left: 156px;
+	bottom: 5px;
+}
+
+.scrollbox {
+	width: 318px;
+	height: 2px;
+	box-sizing: border-box;
+	margin-top: 20px;
+	padding-left: 14px;
+	padding-right: 57px;
+	background-color: rgba(255, 255, 255, 0.3); 
+}
+
+.scrollbox-scale {
+	position: relative;
+	width: 247px;
+	height: 2px;
+	background-color: #ffffff;
+}
+
+.scrollbox-scale::after,
+.scrollbox-scale::before {
+  content: "";
+	display: block;
+	position: absolute;
+	width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+	top: -9px;
+}
+
+.scrollbox-scale::after {
+	left: -14px;
+}
+
+.scrollbox-scale::before {
+	right: -12px;
+}
+
 .filters input[type="submit"] {
-	color: inherit;
-	font-weight: inherit;
-	font-size: inherit;
+	box-sizing: border-box;
+	min-width: 137px;
+	text-align: center;
 	background-color: transparent;
 	border: solid 2px #ffffff;
 	border-radius: 2px;
+	margin-right: 96px;
+	margin-bottom: 3px;
+	padding-top: 6px;
+	padding-bottom: 5px;
+	padding-left: 30px;
+	padding-right: 30px;
+	cursor: pointer;
 }
 
 .filters input[type="submit"]:hover {
@@ -560,6 +815,11 @@ input[name="price-max"] {
 	margin-left: 30px;
 }
 
+.sort-items .active {
+	border: none;
+	color: #81b3d2;
+}
+
 .sort-item:hover {
 	color: #81b3d2;
 }
@@ -567,6 +827,38 @@ input[name="price-max"] {
 .sort-item:active {
 	border-bottom: none;
 	color: #000000;
+}
+
+.sort-buttons {
+	box-sizing: border-box;
+	padding-top: 2px;
+}
+
+.direct {
+	border: none;
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+}
+
+button[name="descending"] {
+	margin-left: 10px;
+}
+
+button[name="descending"] path {
+	fill: #81b3d2;
+}
+
+button[name="ascending"] path {
+	fill: #cacaca;
+}
+
+button[name="ascending"]:hover path {
+	fill: #231f20;
+}
+
+button[name="ascending"]:active path {
+	fill: #81b3d2;
 }
 
 /* Результаты поиска. Список отелей. */
@@ -711,14 +1003,20 @@ input[name="price-max"] {
 /* Футер */
 
 .main-page-footer {
+	height: 120px;
 	background: 
 		url("../img/map.jpg") bottom center no-repeat;
 }
 
 .transparent-box {
 	display: flex;
-	height: 120px;
 	background-color: rgba(255, 255, 255, 0.9);
+}
+
+.inside-page-footer {
+	display: flex;
+	height: 120px;
+	background-color: #ffffff;
 }
 
 .hashtag-box, 
@@ -729,10 +1027,7 @@ input[name="price-max"] {
 	align-items: center;
 	box-sizing: border-box;
 	width: 400px;
-	padding-top: 36px;
-	padding-bottom: 36px;
-	padding-left: 85px;
-	padding-right: 85px;
+	padding: 36px;
 	text-align: center;
 }
 
@@ -791,6 +1086,15 @@ input[name="price-max"] {
 	margin-right: 8px;
 }
 
-.academy-button img {
-	display: block;
+.copyright a {
+	width: 115px;
+	height: 41px;
+}
+
+.copyright a:hover path {
+	fill: #81b3d2;
+}
+
+.copyright a:active path {
+	fill: #bdbbbc;
 }
