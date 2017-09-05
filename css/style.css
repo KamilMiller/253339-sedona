@@ -158,6 +158,7 @@ a {
 
 .slogan {
 	display: inline-block;
+	vertical-align: middle;
 	line-height: 26px;
 	margin-bottom: 27px;
 }
@@ -300,6 +301,7 @@ a {
 
 .advantage-box-c .subtitle {
 	display: inline-block;
+	vertical-align: middle;
 	width: 120px;
 	margin-bottom: 24px;
 }
@@ -333,6 +335,7 @@ a {
 
 .search-form-intro span {
 	display: inline-block;
+	vertical-align: middle;
 	font-size: 30px;
 	font-weight: bold;
 	line-height: 36px;
@@ -382,8 +385,6 @@ a {
 	position: absolute;
 	box-sizing: border-box;
 	width: 568px;
-/*	height: 395px;*/
-/*	Высота временно. Дoверстаю форму — уберу. К.Н. */
 	font-weight: bold;
 	top: 0;
 	left: 50%;
@@ -395,7 +396,6 @@ a {
 
 .search-form {
 	display: flex;
-/*	flex-direction: column;*/
 	flex-wrap: wrap;
 }
 
@@ -434,7 +434,6 @@ label[for="right-counter"] {
 	text-transform: uppercase;
 	color: #000000;
 	box-sizing: border-box;
-	border: none;
 	vertical-align: middle;
 	height: 38px;
 	background-color: #f2f2f2;
@@ -443,16 +442,18 @@ label[for="right-counter"] {
 }
 
 input[name="date"] {
+	border: solid 2px #f2f2f2;
 	width: 346px;
-	padding-left: 12px;
+	padding-left: 11px;
 	padding-right: 51px;
 }
 
 input[name="date"]:hover {
+	border: solid 2px #ebebeb;
 	background-color: #ebebeb;
 }
 
-input[name="date"]:active {
+input[name="date"]:focus {
 	background-color: #ffffff;
 	border: solid 2px #e5e5e5;
 }
@@ -487,6 +488,7 @@ input[name="date"]:active {
 }
 
 input[name="counter"] {
+	border: none;
 	width: 36px;
 	text-align: center; 
 }
@@ -497,7 +499,6 @@ input[name="counter"] {
 	vertical-align: middle;
 	width: 39px;
 	height: 38px;
-/*	background-color: #f2f2f2;*/
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -534,6 +535,7 @@ input[name="counter"] {
 }
 
 .search-form input[type="submit"] {
+	border: none;	
 	font-size: 21px;
 	color: #ffffff;
 	background-color: #81b3d2;
@@ -579,9 +581,9 @@ input[name="counter"] {
 /* Фильтры поиска. */
 
 .filters {
+	background-color: #4a555d;
 	background: url("../img/filter-background.jpg") 50% -56px no-repeat;
 	color: #ffffff;
-/*	height: 217px;*/
 	box-sizing: border-box;
 	padding-top: 25px;
 	padding-bottom: 30px;
@@ -661,6 +663,14 @@ input[type="checkbox"]:not(:checked) ~ .checkbox-label::before {
 
 input[type="checkbox"]:checked ~ .checkbox-label::before {
 	background: url("../img/checkbox-on.svg") top left no-repeat;
+}
+
+input[type="checkbox"]:not(:checked):disabled ~ .checkbox-label::before {
+	background: url("../img/checkbox-off-disabled.svg") top left no-repeat;
+}
+
+input[type="checkbox"]:checked:disabled ~ .checkbox-label::before {
+	background: url("../img/checkbox-on-disabled.svg") top left no-repeat;
 }
 
 .price-box {
@@ -796,7 +806,6 @@ input[name="price-range"] {
 	font-size: 12px;
 	line-height: 18px;
 	width: 600px;
-/*	Можно сделать и пошире. После верстки кнопок справа добавлю ширины. К.Н. */
 	margin-right: auto;
 }
 
@@ -913,15 +922,16 @@ button[name="ascending"]:active path {
 
 .search-result-type {
 	display: inline-block;
+	vertical-align: middle;
 	width: 112px;
 }
 
 .hotel-info p:first-of-type {
-	margin-bottom: 11px;
+	margin-bottom: 9px;
 }
 
 .hotel-info p:nth-of-type(2) {
-	margin-bottom: 3px;
+	margin-bottom: 4px;
 }
 
 .hotel-page,
@@ -936,6 +946,7 @@ button[name="ascending"]:active path {
 
 .hotel-page {
 	display: inline-block;
+	vertical-align: top;
 	width: 110px;
 	height: 27px;
 	background-color: #81b3d2;
@@ -954,6 +965,7 @@ button[name="ascending"]:active path {
 
 .booking-form {
 	display: inline-block;
+	vertical-align: top;
 	width: 142px;
 	height: 27px;
 	background-color: #766357;
@@ -986,6 +998,7 @@ button[name="ascending"]:active path {
 
 .star {
 	display: inline-block;
+	vertical-align: top;
 	width: 18px;
 	height: 17px;
 	background: url("../img/star.svg") top center no-repeat;
@@ -1032,7 +1045,7 @@ button[name="ascending"]:active path {
 }
 
 .hashtag {
-	margin: 0;
+	margin-bottom: 8px;
 }
 
 /* Социальные кнопки */
