@@ -418,7 +418,7 @@ a {
 	        box-sizing: border-box;
 	width: 568px;
 	font-weight: bold;
-	top: 0;
+	top: 100%;
 	left: 50%;
 	margin-left: -284px;
 	padding: 55px;
@@ -651,7 +651,10 @@ input[name="counter"] {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	-ms-flex-line-pack: justify;
 	    align-content: space-between;
 	padding: 0;
@@ -768,6 +771,7 @@ input[name="price-range"] {
 }
 
 .scrollbox {
+	position: relative;
 	width: 318px;
 	height: 2px;
 	-webkit-box-sizing: border-box;
@@ -779,21 +783,18 @@ input[name="price-range"] {
 }
 
 .scrollbox-scale {
-	position: relative;
 	width: 247px;
 	height: 2px;
 	background-color: #ffffff;
 }
 
-.scrollbox-scale::after,
-.scrollbox-scale::before {
-  content: "";
+.toggle {
 	display: block;
 	position: absolute;
 	width: 4px;
   height: 4px;
   background: #ababab;
-  border: 8px solid #ffffff;
+  border: solid 8px #ffffff;
   border-radius: 50%;
   -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
           box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
@@ -801,12 +802,24 @@ input[name="price-range"] {
 	top: -9px;
 }
 
-.scrollbox-scale::after {
-	left: -14px;
+.min-toggle {
+	left: 0px;
 }
 
-.scrollbox-scale::before {
-	right: -12px;
+.max-toggle {
+	right: 45px;
+}
+
+.min-toggle:hover {
+	border: solid 9px #ffffff;
+	top: -10px;
+	left: -1px;
+}
+
+.max-toggle:hover {
+	border: solid 9px #ffffff;
+	top: -10px;
+	right: 44px;
 }
 
 .filters input[type="submit"] {
@@ -1161,7 +1174,7 @@ button[name="ascending"]:active path {
 	background-color: #81b3d2;
 	font-size: 0px;
 	border: solid 1px #81b3d2;
-  text-align: center;
+	text-align: center;
 	vertical-align: middle;
 	margin-left: 3px;
 	margin-right: 3px;
