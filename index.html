@@ -92,9 +92,9 @@
 							<span>Заинтересовались?</span>
 							<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 						</div>
-						<a href="#" class="open-form-button">Поиск гостиницы в Седоне</a>
+						<a href="form.html" class="open-form-button">Поиск гостиницы в Седоне</a>
 					</div>
-					<div class="middle-box">
+					<div class="middle-box nojs">
 						<div class="search-form-field">
 							<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
 								<p>
@@ -144,8 +144,7 @@
 					<div class="lower-box">
 						<div class="modal-map">
 							<h2 class="visually-hidden">Как до нас добраться</h2>
-							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d838768.2769705529!2d-111.61781282461257!3d34.794906219896816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1505094154785" width="1180" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-							<button class="modal-close" type="button">Закрыть</button>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d838768.2769705529!2d-111.61781282461257!3d34.794906219896816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1505094154785" width="1200" height="473" frameborder="0" style="border:0" allowfullscreen></iframe>
 						</div>
 					</div>
 				</section>
@@ -181,39 +180,6 @@
 				</div>
 			</footer>
 	  </div>
-		
-		<script>
-			var link = document.querySelector(".open-form-button");
-			var popup = document.querySelector(".search-form-field");
-			
-			link.addEventListener("click", function (evt) {
-				evt.preventDefault();
-				popup.classList.toggle("hide-form")
-			});
-			
-			var mapLink = document.querySelector(".lower-box");
-      var mapPopup = document.querySelector(".modal-map");
-      var mapClose = mapPopup.querySelector(".modal-close");
-  
-      mapLink.addEventListener("click", function (evt) {
-				evt.preventDefault();
-				mapPopup.classList.add("modal-show");
-			});
-			
-			mapClose.addEventListener("click", function (evt) {
-				evt.preventDefault();
-				mapPopup.classList.remove("modal-show");
-			});
-			
-			window.addEventListener("keydown", function (evt) {
-				if (evt.keyCode === 27) {
-					if (mapPopup.classList.contains("modal-show")) {
-						mapPopup.classList.remove("modal-show");
-					}
-				}
-			});
-			
-		</script>
-	
+		<script src="js/popup.js"></script>
 	</body>
 </html>
